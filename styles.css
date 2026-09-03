@@ -9,7 +9,7 @@ body{
     margin: 0 auto;
     max-width: 1200px;
     font-family: 'Lato';
-    background-color: #030101;
+    background-color: #d48181;
 }
 .icon-cart{
     width: 40px;
@@ -31,21 +31,53 @@ header{
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
     gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 .item{
-    border-radius: 20px;
+    border-radius: 10px;
 }
 .item:hover{
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+    box-shadow: 0 10px 20px rgba(143, 4, 4, 0.5);
 }
 .infoProduct{
     padding: 15px 30px;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 .item img{
     width: 100%;
     height: 300px;
     object-fit: cover;
     border-radius: 10px 10px 0 0;
+    transition: all 0.5s;
 }
+.item figure{
+    oerflow: hidden;
+}
+.item:hover img{
+    transform: scale(1.2);
+}
+.price{
+    font-size: 18px;
+    font-weight: 900;
+}
+.infoProduct button{
+    border: none;
+    background: none;
+    background-color: #000;
+    color: #fff;
+    padding: 15px 10px;
+    cursor: pointer
+}
+.botonInicio{
+    background-color: #5715d1;
+    border: none;
+    color: #fff;
+    padding: 15px 32px;
+    text-decoration: none;
+    font-size: 1.4rem;
+    border-radius: 12px;
+    font-family: sans-serif;
+}
+
