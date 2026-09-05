@@ -133,21 +133,28 @@ header {
 }
 
 
-body.pagina2{
-    margin: 0 auto;
-    padding: 0;
-    font-family: 'Lato';
-    background: linear-gradient(150deg, #d48181, #000);
-    height: 100vh;
+.pagina2 {
+  display: flex;
+  flex-direction: column; /* Apila los elementos verticalmente */
+  align-items: center;    /* Los centra horizontalmente */
+  justify-content: center;/* Los centra verticalmente en la pantalla */
+  min-height: 100vh;      /* Ocupa el 100% del alto de la ventana */
+  margin: 0;              /* Quita los márgenes por defecto */
+  /* Mantén aquí tu color de fondo degradado (background) */
+  background-color: #2c2c2c background-color: #2c2c2c
 }
-.formulario{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 400px;
-    background: white;  
-} 
+.formulario {
+  /* Mantén el color de fondo rosa que ya tienes */
+  background-color: #f2d5d5; /* (O el código de tu color rosa) */
+  
+  /* AUMENTA ESTOS VALORES: */
+  width: 400px;    /* Aumenta el ancho (si antes tenías 300px, prueba con 400px o 450px) */
+  padding: 50px;   /* Esto le da más "aire" por dentro, separando los bordes de las letras */
+  
+  /* Otros estilos recomendados si no los tienes: */
+  border-radius: 10px; /* Para redondear las esquinas y que se vea más moderno */
+  box-sizing: border-box; /* Asegura que el padding no desajuste el ancho total */
+}
 .formulario h1{
     text-align: center;
     padding: 0 0 20px 0;
@@ -181,9 +188,80 @@ form .username{
     pointer-events: none;
     transition: .5s;
 }
+.username span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100px;
+    height: 2px;
+    background: #551a57;
+}
+.username input:focus ~ label,
+.username input:focus ~ label{
+    top: -5px;
+    color: #444;
+}
+.recordar{
+    margin: -5px 0 20px 5px;
+    color: rgb(26, 8, 192);
+    cursor: pointer;
+}
+.recordar:hover{
+    text-decoration: underline;
+}
+input[type ="submit"]{
+    width:100%;
+    height: 50px;
+    border: 1px solid;
+    background: #551a57;
+    border-radius: 25px;
+    font-size: 18px;
+    color: aliceblue;
+    cursor: pointer;
+    outline: none;
+
+}
+input[type="submit"]:hover{
+    border-color: #551a57;
+    transition: .5s;
+}
+.registro{
+    margin: 30px 0;
+    text-align: center;
+    font-size:16px;
+    color: #111;
+}
+
 
 .logo-principal {
     height: 200px; /* ⬅️ Bajamos el tamaño a 80px para que encaje perfecto en el encabezado */
     width: auto;
     object-fit: contain;
+    text-align: center;
+}
+
+body.pagina2 {
+  margin: 0;
+  /* Mantén aquí tu color de fondo degradado actual */
+}
+
+.contenedor-centrado {
+  display: flex;
+  flex-direction: column; /* Apila el logo arriba y la caja abajo */
+  align-items: center;    /* Centra los elementos horizontalmente */
+  justify-content: center;/* Centra los elementos verticalmente */
+  min-height: 100vh;      /* Asegura que ocupe todo el alto de la pantalla */
+}
+
+.logo-login {
+  margin-bottom: 30px; /* Crea un espacio de separación entre el logo y el cuadro blanco */
+  width: 120px;        /* Ajusta el tamaño de tu logo si es necesario */
+}
+
+.caja-login {
+  /* Mantén los estilos que ya le tienes a tu cuadro blanco */
+  background-color: white;
+  width: 300px;
+  /* ... resto de tus estilos ... */
 }

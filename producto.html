@@ -7,9 +7,12 @@
     <link rel="stylesheet" href="styles2.css">
 </head>
 <body class="pagina3">
-    <header>
+<header>
+    <!-- La etiqueta <a> envuelve a la imagen y crea el enlace -->
+    <a href="index.html">
         <img src="img/logo3.png" alt="Logo CH Store" class="logo-principal">
-    </header>
+    </a>
+</header>
     <div class="container-titulo">Polera Essential Relaxed - Verde Olivo</div>
 
 
@@ -25,7 +28,7 @@
             </div>
         <div class="containerDetalle">
             <div class="form-group">
-                <label for="colur">color</label>
+                <label for="colur">Color</label>
                 <select name="color">
                     <option disabled selected value ="">
                         Escoja un color
@@ -38,28 +41,29 @@
 
             </div>
             <div class="form-group">
-                <label for="talla">talla</label>
+                <label for="talla">Talla</label>
                 <select name="talla">
                     <option disabled selected value ="">
                         Escoja una talla
 
                     </option>
-                    <option value="rojo">s</option>
-                    <option value="rojo">m</option>
+                    <option value="rojo">S</option>
+                    <option value="rojo">M</option>
                     <option value="rojo">L</option>
                 </select>
             </div>
-            <div class ="add-cart">
-                <div class="container-quantity">
-                    <label for="quantity">Cantidad</label>
-                    <input type="number"  value="1" min="1">
-                </div>
-            </div>
-            <button class="add-cart">
-                <i class="fa-solid fa-plus"></i>
-                Añadir al carrito
-            </button>
-        </div>
+<div class="add-cart">
+    <div class="container-quantity">
+        <label for="quantity">Cantidad</label>
+        <input type="number" value="1" min="1">
+    </div>
+    
+    <!-- El botón ahora está DENTRO del div "add-cart" -->
+    <button class="btn-agregar">
+        <i class="fa-solid fa-plus"></i>
+        Añadir al carrito
+    </button>
+</div>
         <div class="container-descripcion">
             <div class="titulo-descrip">
                 <h4>Descripción</h4>

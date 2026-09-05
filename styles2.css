@@ -74,10 +74,19 @@ main{
     color: rgb(12, 7, 1);
 }
 .add-cart{
-    display: flex;
-    gap: 30px;
-    padding-bottom: 15px;
-    border-bottom: 1p solid #f3e3e3;
+
+    background-color: #d6d2d2;      /* Fondo negro */
+    color: #fff;                 /* Texto blanco */
+    padding: 12px 15px;          /* Espacio interno del botón */
+    border: none;                /* Quita el borde por defecto */
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;             /* Cambia el cursor a una manito */
+    display: inline-flex;
+    gap: 10px;                   /* Espacio entre el ícono + y el texto */
+    margin-top: 20px;            /* Espacio para separarlo de la cantidad */
+    transition: background-color 0.3s ease; /* Efecto suave */
+    align-items: center;
 }
 
 
