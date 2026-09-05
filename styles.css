@@ -1,267 +1,477 @@
-*::after,
+
+*,
 *::before,
-*{
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body.pagina1{
-    margin: 0 auto;
-    max-width: 1200px;
-    font-family: 'Lato';
+
+body {
+    font-family: 'Lato', 'Ubuntu', sans-serif;
+    color: #333;
     background-color: #fdf1f1;
+    line-height: 1.6;
 }
-.icon-cart{
-    width: 40px;
-    height: 40px;
+
+body.pagina1,
+body.pagina3 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
-img{
+
+img {
     max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 
-header{
+
+header {
     display: flex;
     justify-content: space-between;
-    padding: 30px 0 40px 0;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo-principal {
+    height: 90px;
+    width: auto;
+    object-fit: contain;
+}
+
+.menu-derecha {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.boton-pequeno {
+    background-color: #111;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.boton-pequeno:hover {
+    background-color: #444;
+}
+
+.icon-cart {
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
 }
 
 
-.containerItems{
+.containerItems {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 20px;
 }
-.item{
+
+.item {
     border-radius: 10px;
+    background-color: #fff;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.item:hover{
-    box-shadow: 0 10px 20px rgba(143, 4, 4, 0.5);
+
+.item:hover {
+    box-shadow: 0 10px 20px rgba(143, 4, 4, 0.2);
+    transform: translateY(-5px);
 }
-.infoProduct{
-    padding: 15px 30px;
-    line-height: 2;
+
+.item figure {
+    overflow: hidden;
+    height: 300px;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.item:hover img {
+    transform: scale(1.1);
+}
+
+.infoProduct {
+    padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-.item img{
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 10px 10px 0 0;
-    transition: all 0.5s;
+
+.infoProduct h2 {
+    font-size: 16px;
+    color: #222;
 }
-.item figure{
-    oerflow: hidden;
-}
-.item:hover img{
-    transform: scale(1.2);
-}
-.price{
+
+.price {
     font-size: 18px;
     font-weight: 900;
+    color: #111;
 }
-.infoProduct button{
+
+.infoProduct button {
     border: none;
-    background: none;
     background-color: #000;
     color: #fff;
-    padding: 15px 10px;
-    cursor: pointer
-}
-/* Modificamos el header para que centre los elementos verticalmente */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; /* ESTO EVITA QUE EL BOTÓN SE ESTIRE HACIA ABAJO */
-    padding: 30px 20px 20px 20px;
-}
-
-/* El nuevo contenedor que pone el botón y el carrito uno al lado del otro */
-.menu-derecha {
-    display: flex;
-    align-items: center;
-    gap: 25px; /* Espacio de separación entre el botón y el carrito */
-}
-
-/* El nuevo estilo del botón */
-.boton-pequeno {
-    background-color: #f5e4e477;    /* Color de fondo negro (más elegante) */
-    color: #fff;               /* Texto blanco */
-    padding: 10px 20px;        /* Tamaño del botón */
-    text-decoration: none;     /* Quita el subrayado */
-    font-size: 14px;           
+    padding: 12px 10px;
+    cursor: pointer;
     font-weight: bold;
-    border-radius: 8px;        /* Bordes ligeramente redondeados */
-    transition: background-color 0.3s ease; /* Efecto suave */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-/* Efecto cuando pasas el mouse por encima del botón */
-.boton-pequeno:hover {
-    background-color: #444; 
-}/* Modificamos el header para que centre los elementos verticalmente */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; /* ESTO EVITA QUE EL BOTÓN SE ESTIRE HACIA ABAJO */
-    padding: 30px 20px 20px 20px;
+.infoProduct button:hover {
+    background-color: #333;
 }
 
-/* El nuevo contenedor que pone el botón y el carrito uno al lado del otro */
-.menu-derecha {
+
+body.pagina2 {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 25px; /* Espacio de separación entre el botón y el carrito */
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #2c2c2c;
 }
 
-/* El nuevo estilo del botón */
-.boton-pequeno {
-    background-color: #111;    /* Color de fondo negro (más elegante) */
-    color: #fff;               /* Texto blanco */
-    padding: 10px 20px;        /* Tamaño del botón */
-    text-decoration: none;     /* Quita el subrayado */
-    font-size: 14px;           
-    font-weight: bold;
-    border-radius: 8px;        /* Bordes ligeramente redondeados */
-    transition: background-color 0.3s ease; /* Efecto suave */
-}
-
-/* Efecto cuando pasas el mouse por encima del botón */
-.boton-pequeno:hover {
-    background-color: #444; 
-}
-
-
-.pagina2 {
-  display: flex;
-  flex-direction: column; /* Apila los elementos verticalmente */
-  align-items: center;    /* Los centra horizontalmente */
-  justify-content: center;/* Los centra verticalmente en la pantalla */
-  min-height: 100vh;      /* Ocupa el 100% del alto de la ventana */
-  margin: 0;              /* Quita los márgenes por defecto */
-  /* Mantén aquí tu color de fondo degradado (background) */
-  background-color: #2c2c2c background-color: #2c2c2c
-}
 .formulario {
-  /* Mantén el color de fondo rosa que ya tienes */
-  background-color: #f2d5d5; /* (O el código de tu color rosa) */
-  
-  /* AUMENTA ESTOS VALORES: */
-  width: 400px;    /* Aumenta el ancho (si antes tenías 300px, prueba con 400px o 450px) */
-  padding: 50px;   /* Esto le da más "aire" por dentro, separando los bordes de las letras */
-  
-  /* Otros estilos recomendados si no los tienes: */
-  border-radius: 10px; /* Para redondear las esquinas y que se vea más moderno */
-  box-sizing: border-box; /* Asegura que el padding no desajuste el ancho total */
+    background-color: #f2d5d5;
+    width: 100%;
+    max-width: 420px;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
-.formulario h1{
+
+.formulario h1 {
     text-align: center;
-    padding: 0 0 20px 0;
-    border-bottom: 1px solid silver;
-}  
-.formulario form{
-    padding: 0 40px;
-    box-sizing: border-box;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+    font-size: 24px;
+    color: #222;
 }
-form .username{
+
+.formulario form {
+    margin-top: 20px;
+}
+
+form .username {
     position: relative;
     border-bottom: 2px solid silver;
-    margin: 30px 0;
+    margin: 25px 0 10px 0;
 }
-.username input{
+
+.username input {
     width: 100%;
     padding: 0 5px;
     height: 40px;
     font-size: 16px;
     border: none;
-    background: none;
+    background: transparent;
     outline: none;
 }
-.username label{
+
+.username label {
     position: absolute;
     top: 50%;
     left: 5px;
-    color: #999;
+    color: #777;
     transform: translateY(-50%);
-    font-size: 16px;
+    font-size: 15px;
     pointer-events: none;
-    transition: .5s;
+    transition: 0.3s ease;
 }
-.username span::before{
-    content: '';
-    position: absolute;
-    top: 40px;
-    left: 0;
-    width: 100px;
-    height: 2px;
-    background: #551a57;
-}
+
 .username input:focus ~ label,
-.username input:focus ~ label{
+.username input:valid ~ label {
     top: -5px;
-    color: #444;
+    color: #551a57;
+    font-size: 12px;
+    font-weight: bold;
 }
-.recordar{
-    margin: -5px 0 20px 5px;
-    color: rgb(26, 8, 192);
+
+.mensaje-error {
+    color: #ff3333;
+    font-size: 13px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 15px;
+    min-height: 18px;
+    text-align: left;
+}
+
+.recordar {
+    margin: 10px 0 20px 0;
+    color: #1a08c0;
+    font-size: 14px;
     cursor: pointer;
 }
-.recordar:hover{
+
+.recordar:hover {
     text-decoration: underline;
 }
-input[type ="submit"]{
-    width:100%;
-    height: 50px;
-    border: 1px solid;
+
+input[type="submit"] {
+    width: 100%;
+    height: 45px;
+    border: none;
     background: #551a57;
     border-radius: 25px;
-    font-size: 18px;
-    color: aliceblue;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
     cursor: pointer;
-    outline: none;
+    transition: background-color 0.3s ease;
+}
 
+input[type="submit"]:hover {
+    background-color: #3b103c;
 }
-input[type="submit"]:hover{
-    border-color: #551a57;
-    transition: .5s;
-}
-.registro{
-    margin: 30px 0;
+
+.registro {
+    margin-top: 20px;
     text-align: center;
-    font-size:16px;
+    font-size: 14px;
     color: #111;
 }
 
+.registro a {
+    color: #551a57;
+    font-weight: bold;
+    text-decoration: none;
+}
 
-.logo-principal {
-    height: 200px; /* ⬅️ Bajamos el tamaño a 80px para que encaje perfecto en el encabezado */
-    width: auto;
-    object-fit: contain;
+.registro a:hover {
+    text-decoration: underline;
+}
+
+
+.container-titulo {
+    padding: 20px;
+    background-color: #fdd5d5;
+    margin-bottom: 40px;
+    color: #181111;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 8px;
+}
+
+.pagina3 main {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.container-img {
+    background-color: #ffffff;
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.container-img img {
+    width: 70%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+.container-info-producto {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-precio {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f3cbcb;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container-precio span {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.containerDetalle {
+    padding: 20px 0;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    width: 80px;
+    color: #000;
+    font-weight: 700;
+}
+
+.form-group select {
+    width: 250px;
+    border: 1px solid #ccc;
+    padding: 10px 12px;
+    background-color: #c6cdd3;
+    border-radius: 5px;
+    outline: none;
+    color: #0c0701;
+}
+
+.add-cart {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    padding: 12px 15px;
+    background-color: #d6d2d2;
+    border-radius: 5px;
+}
+
+.container-quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.container-quantity input {
+    width: 60px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     text-align: center;
 }
 
-body.pagina2 {
-  margin: 0;
-  /* Mantén aquí tu color de fondo degradado actual */
+.btn-agregar {
+    background-color: #111;
+    color: #fff;
+    padding: 10px 18px;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease;
 }
 
-.contenedor-centrado {
-  display: flex;
-  flex-direction: column; /* Apila el logo arriba y la caja abajo */
-  align-items: center;    /* Centra los elementos horizontalmente */
-  justify-content: center;/* Centra los elementos verticalmente */
-  min-height: 100vh;      /* Asegura que ocupe todo el alto de la pantalla */
+.btn-agregar:hover {
+    background-color: #444;
 }
 
-.logo-login {
-  margin-bottom: 30px; /* Crea un espacio de separación entre el logo y el cuadro blanco */
-  width: 120px;        /* Ajusta el tamaño de tu logo si es necesario */
+.container-descripcion {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #e0e0e0;
+    padding: 20px 0;
 }
 
-.caja-login {
-  /* Mantén los estilos que ya le tienes a tu cuadro blanco */
-  background-color: white;
-  width: 300px;
-  /* ... resto de tus estilos ... */
+.titulo-descrip {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.container-descripcion p {
+    color: #444;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+.container-related-products h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 22px;
+}
+
+.card-list-productos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    cursor: pointer;
+    background: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img {
+    margin-bottom: 10px;
+}
+
+.card-img img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.info-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.texto-producto h3 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #222;
+}
+
+.texto-producto p.categoria {
+    color: #777;
+    font-size: 12px;
+}
+
+.precio {
+    font-weight: bold;
+    color: #111;
+}
+
+footer {
+    padding: 25px;
+    background-color: #ffefef;
+    margin-top: 50px;
+    text-align: center;
+    color: #333;
+    font-size: 14px;
+    border-radius: 8px 8px 0 0;
+}
+
+.hidden {
+    display: none;
 }
