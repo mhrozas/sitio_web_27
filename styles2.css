@@ -22,7 +22,7 @@ header{
 .container-titulo{
 
     padding: 30px ;  
-    background-color: #d48181;    
+    background-color: #fdd5d5;    
     margin-bottom: 50px;
     color: rgb(24, 17, 17);
 }
@@ -32,7 +32,7 @@ main{
     margin-bottom: 80px;
 }
 .container-img {
-    background-color: #d48181;
+    background-color: #ffffff;
     flex: 1;
 }
 .container-info-producto{
@@ -42,7 +42,7 @@ main{
 }
 .container-precio{
     padding-bottom: 30px;
-    border-bottom: 1px solid #d48181;
+    border-bottom: 1px solid #f3cbcb;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -77,5 +77,88 @@ main{
     display: flex;
     gap: 30px;
     padding-bottom: 15px;
-    border-bottom: 1p solid #d48181;
+    border-bottom: 1p solid #f3e3e3;
+}
+
+
+.hidden{
+    display:none ;
+}
+.container-descripcion,
+.container-additional-informativon,
+.containerreviews{
+display: flex;
+flex-direction: column;
+border-bottom: 1px solid #fff;
+padding: 10px 0;
+}
+
+.titulo-descrip,
+.title-additional-informativon,
+.title-reviews{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+
+
+.container-related-products h2{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.card-list-productos{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+.card{
+    cursor: pointer;
+}
+.card-img{
+    background: transparent;
+    margin-bottom: 15px;
+}
+.card-img img{
+    height: 400px ;
+    object-fit: cover;
+    box-shadow: 1px 1px 3px #1a0e0e() rgb;
+}
+.info-card{
+    display: flex;
+    justify-content: space-between;
+}
+.texto-producto{
+    color: #1a0e0e;
+    font-weight: 300;
+    line-height: 1.4;
+}
+.texto-producto h3{
+    color: inherit;
+    font-weight: inherit;
+    font-size:15px;
+}
+.texto-producto p{
+    color: azure;
+    font-size: 13px;
+}
+footer{
+    padding: 30px;
+    background-color: #ffefef;
+    margin-top: 50px;
+    color: rgb(8, 7, 7);
+}
+.logo-principal {
+    height: 150px; /* ⬅️ Bajamos el tamaño a 80px para que encaje perfecto en el encabezado */
+    width: auto;
+    object-fit: contain;
+}
+/* Controla el tamaño de la imagen principal del producto */
+.container-img img {
+    width: 70%;        /* ⬅️ Cambia este porcentaje si la quieres aún más pequeña (ej: 60% o 50%) */
+    height: auto;      /* Mantiene la proporción para que no se deforme */
+    display: block;    /* Necesario para poder centrarla */
+    margin: 0 auto;    /* La centra perfectamente dentro de su mitad izquierda */
+    border-radius: 10px; /* Opcional: le da un toque redondeado a las esquinas */
 }

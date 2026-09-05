@@ -9,7 +9,7 @@ body.pagina1{
     margin: 0 auto;
     max-width: 1200px;
     font-family: 'Lato';
-    background-color: #d48181;
+    background-color: #fdf1f1;
 }
 .icon-cart{
     width: 40px;
@@ -70,15 +70,66 @@ header{
     padding: 15px 10px;
     cursor: pointer
 }
-.botonInicio{
-    background-color: #5715d1;
-    border: none;
-    color: #fff;
-    padding: 15px 32px;
-    text-decoration: none;
-    font-size: 1.4rem;
-    border-radius: 12px;
-    font-family: sans-serif;
+/* Modificamos el header para que centre los elementos verticalmente */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* ESTO EVITA QUE EL BOTÓN SE ESTIRE HACIA ABAJO */
+    padding: 30px 20px 20px 20px;
+}
+
+/* El nuevo contenedor que pone el botón y el carrito uno al lado del otro */
+.menu-derecha {
+    display: flex;
+    align-items: center;
+    gap: 25px; /* Espacio de separación entre el botón y el carrito */
+}
+
+/* El nuevo estilo del botón */
+.boton-pequeno {
+    background-color: #f5e4e477;    /* Color de fondo negro (más elegante) */
+    color: #fff;               /* Texto blanco */
+    padding: 10px 20px;        /* Tamaño del botón */
+    text-decoration: none;     /* Quita el subrayado */
+    font-size: 14px;           
+    font-weight: bold;
+    border-radius: 8px;        /* Bordes ligeramente redondeados */
+    transition: background-color 0.3s ease; /* Efecto suave */
+}
+
+/* Efecto cuando pasas el mouse por encima del botón */
+.boton-pequeno:hover {
+    background-color: #444; 
+}/* Modificamos el header para que centre los elementos verticalmente */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* ESTO EVITA QUE EL BOTÓN SE ESTIRE HACIA ABAJO */
+    padding: 30px 20px 20px 20px;
+}
+
+/* El nuevo contenedor que pone el botón y el carrito uno al lado del otro */
+.menu-derecha {
+    display: flex;
+    align-items: center;
+    gap: 25px; /* Espacio de separación entre el botón y el carrito */
+}
+
+/* El nuevo estilo del botón */
+.boton-pequeno {
+    background-color: #111;    /* Color de fondo negro (más elegante) */
+    color: #fff;               /* Texto blanco */
+    padding: 10px 20px;        /* Tamaño del botón */
+    text-decoration: none;     /* Quita el subrayado */
+    font-size: 14px;           
+    font-weight: bold;
+    border-radius: 8px;        /* Bordes ligeramente redondeados */
+    transition: background-color 0.3s ease; /* Efecto suave */
+}
+
+/* Efecto cuando pasas el mouse por encima del botón */
+.boton-pequeno:hover {
+    background-color: #444; 
 }
 
 
@@ -131,4 +182,8 @@ form .username{
     transition: .5s;
 }
 
-
+.logo-principal {
+    height: 200px; /* ⬅️ Bajamos el tamaño a 80px para que encaje perfecto en el encabezado */
+    width: auto;
+    object-fit: contain;
+}
