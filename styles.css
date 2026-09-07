@@ -37,7 +37,7 @@ header {
 }
 
 .logo-principal {
-    height: 90px;
+    height: 110px;
     width: auto;
     object-fit: contain;
 }
@@ -476,11 +476,11 @@ footer {
     display: none;
 }
 
-/* ==========================================
-   ESTILOS DE LA PLANTILLA DE VIDEO
-   ========================================== */
+
+
+
 .seccion-video {
-    background-color: #ffffff;
+    background-color: #fdf9f9;
     padding: 25px;
     border-radius: 10px;
     margin: 20px 0 35px 0;
@@ -500,9 +500,9 @@ footer {
 .contenedor-video {
     width: 100%;
     max-height: 480px;
-    overflow: hidden;
+    overflow: none;
     border-radius: 8px;
-    background-color: #000000;
+    background-color: #fdf1f1;
 }
 
 .video-destacado {
