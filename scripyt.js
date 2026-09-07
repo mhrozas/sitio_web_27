@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (esValido) {
             alert('¡Inicio de sesión exitoso!');
-            formLogin.reset(); // Reinicia los campos del formulario
+            formLogin.reset(); 
         }
     });
 });
